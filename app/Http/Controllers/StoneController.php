@@ -27,7 +27,7 @@ class StoneController extends Controller
      */
     public function create()
     {
-        return view('stones.create');
+        return view('stone.create');
     }
 
     /**
@@ -38,8 +38,19 @@ class StoneController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->all();
-        dump($data);
+        $datas = $request->all();
+        dump($datas);
+
+        $stone = new Stone();
+
+        $stone->nome = $datas['nome'];
+        $stone->descrizione = $datas['descrizione'];
+        $stone->composizione = $datas['composizione'];
+        $stone->foto = $datas['foto'];
+
+        $stone->save();
+
+        return redirect()->route('stone.show',$stone->id);
     }
 
     /**
@@ -50,7 +61,7 @@ class StoneController extends Controller
      */
     public function show($id)
     {
-        //
+        return 'detail stone';
     }
 
     /**

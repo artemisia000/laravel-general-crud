@@ -3,10 +3,11 @@
 @section('content')
     <div class="container">
         <div class="row">
+            <h1>Aggiungi nuove pietre</h1>
             <div class="col-2">
             </div>
             <div class="col 8">
-                <form action="{{ route('stones.store')}}" method="POST"></form>
+                <form action="{{ route('stones.store')}}" method="POST">
                 @csrf
                 <label for="nome" class="form-label" >Nome della pietra</label>
                 <input type="text" class="form-control" id="nome">
@@ -21,9 +22,10 @@
                 <input type="text" class="form-control" id="foto">
             </div>
             <div>
-                <button type="submit" class="btn btn-success">
+                <button type="submit" class="btn btn-primary">
                     Aggiungi
                 </button>
+            </form>   
             </div>
             <div class="col-2">
             </div>
