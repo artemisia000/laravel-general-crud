@@ -16,7 +16,8 @@ class StoneController extends Controller
     public function index()
     {
         $stones = Stone::all();
-        return view('stones.index',compact('stones'));
+
+        return view('stone.index',compact('stones'));
     }
 
     /**
@@ -26,7 +27,7 @@ class StoneController extends Controller
      */
     public function create()
     {
-        //
+        return view('stones.create');
     }
 
     /**
@@ -37,7 +38,8 @@ class StoneController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        dump($data);
     }
 
     /**

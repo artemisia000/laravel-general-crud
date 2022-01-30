@@ -13,11 +13,12 @@
                 <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Galleria</a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="{{ route('stones.index')}}">Pietre</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ route('stones.create')}}">Aggiungi pietre preziose</a>
+              </li>
+            </ul>
             </ul>
           </div>
         </div>
