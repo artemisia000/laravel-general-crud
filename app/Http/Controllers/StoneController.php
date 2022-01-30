@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Stone;
 
 
-class StonesController extends Controller
+class StoneController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,8 @@ class StonesController extends Controller
      */
     public function index()
     {
-        //
+        $stones = Stone::all();
+        return view('stones.index',compact('stones'));
     }
 
     /**
